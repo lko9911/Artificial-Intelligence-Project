@@ -309,7 +309,7 @@ if __name__ == "__main__":
         # 로그 기록 추가
         with open(log_path, "a") as f:
             f.write(f"{epoch+1},{train_loss:.6f},{val_loss:.6f},{lr:.8f}\n")
-            
+
         save_checkpoint(model, optimizer, epoch, val_loss, last_ckpt)
         if val_loss < best_val_loss:
             best_val_loss = val_loss
