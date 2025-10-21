@@ -22,7 +22,7 @@ class Config:
     batch_size = 4
     learning_rate = 1e-4
     num_workers = 4
-    epochs = 10
+    epochs = 30
     device = "cuda" if torch.cuda.is_available() else "cpu"
     train_ratio = 0.8
     val_ratio = 0.1
@@ -367,3 +367,4 @@ if __name__ == "__main__":
     print(f"\n[Test Result] Average test loss: {test_loss:.4f}")
 
     visualize_predictions(model, test_dataset, device, num_samples=5)
+    
