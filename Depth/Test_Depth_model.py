@@ -18,7 +18,7 @@ checkpoint_path = "./checkpoints_depth/best.pth"
 # ==========================
 # 데이터셋 및 모델 로드
 # ==========================
-test_dataset = DepthDataset("./Dataset")
+test_dataset = DepthDataset("Depth/Dataset")
 test_loader = DataLoader(test_dataset, batch_size=1, shuffle=False, num_workers=0)
 
 model = DeepLabv3Plus_Depth(output_channels=1).to(device)
