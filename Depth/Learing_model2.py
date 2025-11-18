@@ -18,12 +18,12 @@ from PIL import Image
 # Config 설정
 # ==========================
 class Config:
-    root_dir = "./Dataset"
+    root_dir = "Depth/Dataset"
     checkpoint_dir = "./checkpoints_depth"
     batch_size = 4
     learning_rate = 1e-4
     num_workers = 4
-    epochs = 30
+    epochs = 44
     device = "cuda" if torch.cuda.is_available() else "cpu"
     train_ratio = 0.8
     val_ratio = 0.1

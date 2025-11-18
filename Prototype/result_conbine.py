@@ -20,7 +20,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 eps = 1e-6
 
 # 단일 이미지 경로
-source = "Depth/SUNRGBD/kv1/NYUdata/NYU0002/image/NYU0002.jpg" 
+source = "Depth/SUNRGBD/kv1/NYUdata/NYU0005/image/NYU0005.jpg" 
 
 # Depth 모델의 체크포인트 경로
 checkpoint_path = "Depth/checkpoints_depth/best.pth"

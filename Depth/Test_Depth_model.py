@@ -13,7 +13,7 @@ from model import DeepLabv3Plus_Depth
 # ==========================
 device = "cuda" if torch.cuda.is_available() else "cpu"
 eps = 1e-6
-checkpoint_path = "./checkpoints_depth/best.pth"
+checkpoint_path = "./checkpoints_depth/best2.pth"
 
 # ==========================
 # 데이터셋 및 모델 로드

@@ -20,7 +20,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 eps = 1e-6
 
 source = "Depth/SUNRGBD/kv1/NYUdata/NYU0005/image/NYU0005.jpg" 
-checkpoint_path = "Depth/checkpoints_depth/best.pth"
+checkpoint_path = "checkpoints_depth/best2.pth"
 
 # DepthDataset의 img_size와 일치하는 크기 (width, height)
 TARGET_SIZE = (512, 256) 
@@ -167,7 +167,7 @@ except Exception as e:
 # ==========================
 fig, ax = plt.subplots(1, 1, figsize=(9, 4.5)) 
 ax.imshow(yolo_im_array_rgb, aspect='equal') 
-ax.set_title(f"YOLO Detection with Object Depth (Z in Meters)", fontsize=14)
+#ax.set_title(f"YOLO Detection with Object Depth (Z in Meters)", fontsize=14)
 
 
 for obj in detected_objects_3d:
