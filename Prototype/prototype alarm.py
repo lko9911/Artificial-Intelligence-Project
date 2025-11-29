@@ -69,7 +69,7 @@ K_MATRIX = np.array([
 # =============================================================
 # YOLO 추론
 # =============================================================
-yolo_model = YOLO("YOLO/model/best.pt")
+yolo_model = YOLO("main_program/YOLO/model/best.pt")
 yolo_results = yolo_model.predict(source, save=False, conf=0.5, show=False)
 
 detected_objects = []

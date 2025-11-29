@@ -302,8 +302,23 @@ class DepthYoloGUI(QWidget):
 
                 x1, y1, x2, y2 = obj['bbox_xyxy']
                 cv2.rectangle(display_img, (x1, y1), (x2, y2), color, 2)
-                cv2.putText(display_img, f"{obj['class']} Z={Z_cam:.2f}",
-                            (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+                
+                #cv2.putText(display_img, f"{obj['class']} Z={Z_cam:.2f}",
+                #            (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+                
+                def draw_text_custom(img, text, pos, text_color, bg_color, font_scale=0.5, thickness=1):
+                    font = cv2.FONT_HERSHEY_SIMPLEX
+                    x, y = pos
+                    (text_w, text_h), _ = cv2.getTextSize(text, font, font_scale, thickness)
+                    cv2.rectangle(img, (x, y - text_h - 4), (x + text_w, y + 2), bg_color, -1)
+                    cv2.putText(img, text, (x, y), font, font_scale, text_color, thickness)
+
+                draw_text_custom(display_img, obj['class'], (x1, y1 - 25), (255, 255, 255), (0, 0, 255))
+
+                
+                warn_text = " WARNING" if Z_cam < self.distance_threshold else ""
+                info_text = f"Z:{Z:.2f}m{warn_text}"
+                draw_text_custom(display_img, info_text, (x1, y1 - 8), (255, 255, 0), (0, 0, 0))
 
             # ======= 화면 출력 (고정 1280x720) =======
             WINDOW_W, WINDOW_H = 1280, 720
