@@ -195,7 +195,7 @@ class DepthYoloGUI(QWidget):
     # =========================================================
     def load_depth_model(self):
         model = DeepLabv3Plus_Depth(output_channels=1).to(self.device)
-        ckpt = "main_program/checkpoints_depth/best2.pth"
+        ckpt = "main_program/Depth/model/best.pth"
         if not os.path.exists(ckpt):
             self.log("[ERROR] Depth checkpoint not found.")
             return model
