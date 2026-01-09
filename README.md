@@ -1,6 +1,7 @@
+# 🥇 프로젝트 제안서
 <img width="2479" height="3504" alt="인공지능 C조 프로젝트 제안서_1" src="https://github.com/user-attachments/assets/a5b5e7a6-18d4-487a-9427-8d080cac1a93" />
 
-# 🥇 발표 자료
+# 🥈 발표 자료
 <img width="1920" height="1080" alt="슬라이드1" src="https://github.com/user-attachments/assets/0fe5ed6b-b74d-44f4-9853-9738ed3398ea" />
 <img width="1920" height="1080" alt="슬라이드2" src="https://github.com/user-attachments/assets/3be729b5-afb1-493b-87e1-546dbee7a52d" />
 <img width="1920" height="1080" alt="슬라이드3" src="https://github.com/user-attachments/assets/8b422de3-eb65-49aa-8097-f152fa69f9ff" />
